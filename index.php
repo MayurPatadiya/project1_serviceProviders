@@ -160,7 +160,7 @@ require_once 'includes/functions.php';
                             ?>
                             <span>(<?php echo $provider['review_count'] ?: 0; ?> reviews)</span>
                         </div>
-                        <a href="provider/profile.php?id=<?php echo $provider['id']; ?>" class="btn-secondary">View Profile</a>
+                        <a href="provider-details.php?id=<?php echo $provider['id']; ?>" class="btn-secondary">View Profile</a>
                     </div>
                 </div>
                 <?php endwhile; ?>
@@ -205,4 +205,4 @@ require_once 'includes/functions.php';
     document.querySelector('.nav-hamburger').click();
     </script>
 </body>
-</html> 
+</html>

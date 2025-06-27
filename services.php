@@ -73,12 +73,13 @@ $total_records = mysqli_fetch_assoc($count_result)['total'];
 $total_pages = ceil($total_records / $per_page);
 
 // Get providers with services
-$query = "SELECT DISTINCT p.*, 
+$query = "SELECT DISTINCT p.*, u.profile_image,
           AVG(r.rating) as avg_rating, 
           COUNT(DISTINCT r.id) as review_count,
           MIN(s.price) as min_price,
           MAX(s.price) as max_price
           FROM providers p 
+          JOIN users u ON p.user_id = u.id
           LEFT JOIN services s ON p.id = s.provider_id 
           LEFT JOIN reviews r ON p.id = r.provider_id AND r.status = 'active'
           WHERE $where_clause 
@@ -206,13 +207,14 @@ $categories = get_service_categories();
                         <label><input type="radio" name="rating" value="3" <?php echo $rating == 3 ? 'checked' : ''; ?>> 3+ Stars</label>
                     </div>
 
-                    <button type="submit" class="btn-primary" style="width: 100%;">
-                        <i class="fas fa-filter"></i> Apply Filters
-                    </button>
-                    
-                    <a href="services.php" class="btn-secondary" style="width: 100%; text-align: center; margin-top: 0.5rem;">
-                        Clear Filters
-                    </a>
+                    <div class="filter-buttons">
+                        <button type="submit" class="btn-primary" id="btn-filter">
+                            <i class="fas fa-filter"></i> Apply Filters
+                        </button>
+                        <a href="services.php" class="btn-secondary" id="btn-clear">
+                            Clear Filters
+                        </a>
+                    </div>
                 </form>
             </div>
 
@@ -229,12 +231,12 @@ $categories = get_service_categories();
                             <div class="service-card">
                                 <div class="service-image">
                                     <?php
-                                    $profile_image_path = 'assets/images/default-avatar.png';
+                                    $img_path = 'assets/images/default-avatar.png';
                                     if (!empty($provider['profile_image']) && file_exists('uploads/profiles/' . $provider['profile_image'])) {
-                                        $profile_image_path = 'uploads/profiles/' . $provider['profile_image'];
+                                        $img_path = 'uploads/profiles/' . $provider['profile_image'];
                                     }
                                     ?>
-                                    <img src="<?php echo $profile_image_path; ?>" alt="<?php echo htmlspecialchars($provider['business_name']); ?>" class="avatar">
+                                    <img src="<?php echo $img_path; ?>" alt="<?php echo htmlspecialchars($provider['business_name']); ?>" class="avatar">
                                 </div>
                                 <div class="service-info">
                                     <h3><?php echo htmlspecialchars($provider['business_name']); ?></h3>
@@ -327,4 +329,4 @@ $categories = get_service_categories();
 
     <script src="assets/js/main.js"></script>
 </body>
-</html> 
+</html>

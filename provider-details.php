@@ -76,7 +76,7 @@ $categories = get_service_categories();
     <div class="container">
         <div class="provider-details-card">
             <div class="provider-header">
-                <img src="<?php echo !empty($provider['profile_image']) && file_exists('uploads/profiles/' . $provider['profile_image']) ? 'uploads/profiles/' . $provider['profile_image'] : 'assets/images/default-avatar.png'; ?>" alt="<?php echo htmlspecialchars($provider['business_name']); ?>" class="provider-thumb-large">
+                <img src="<?php echo !empty($provider['profile_image']) && file_exists('uploads/profiles/' . $provider['profile_image']) ? 'uploads/profiles/' . $provider['profile_image'] : 'assets/images/default-avatar.png'; ?>" alt="<?php echo htmlspecialchars($provider['business_name']); ?>" class="provider-thumb-large" style="width: 150px; height: 150px;">
                 <div class="provider-main-info">
                     <h1><?php echo htmlspecialchars($provider['business_name']); ?></h1>
                     <p class="category">

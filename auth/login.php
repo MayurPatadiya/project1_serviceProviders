@@ -123,8 +123,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </form>
             
             <div style="text-align: center; margin-top: 1rem;">
-                <p>Don't have an account? <a href="register.php">Register here</a></p>
-                <p><a href="forgot-password.php">Forgot your password?</a></p>
+                <p>Don't have an account? <a href="register.php" class="links">Register here</a></p>
+                <p><a href="forgot-password.php" class="links">Forgot your password?</a></p>
             </div>
         </div>
     </div>

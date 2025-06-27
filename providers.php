@@ -182,7 +182,7 @@ $categories = get_service_categories();
                                         ?>
                                         <span>(<?php echo $provider['review_count'] ?: 0; ?> reviews)</span>
                                     </div>
-                                    <a href="provider/profile.php?id=<?php echo $provider['id']; ?>" class="btn-secondary">View Profile</a>
+                                    <a href="provider-details.php?id=<?php echo $provider['id']; ?>" class="btn-secondary">View Profile</a>
                                 </div>
                             </div>
                         <?php endwhile; ?>
@@ -234,4 +234,4 @@ $categories = get_service_categories();
     </footer>
     <script src="assets/js/main.js"></script>
 </body>
-</html> 
+</html>
