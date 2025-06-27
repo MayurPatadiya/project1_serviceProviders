@@ -1,0 +1,7 @@
+Number    	username  					email   									password
+1 			admin					admin@servicehub.com							password
+2			john_doe					John@example.com								password
+3 			jane_smith				Jane@example.com								password
+4 			mike_electric				mike@electric.com								password
+5 			Sarah_plumber 			Sarah@plumber.com								password
+6			David_cleaner				David@cleaner.com								password
