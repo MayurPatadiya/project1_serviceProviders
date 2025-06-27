@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2025 at 05:22 AM
+-- Generation Time: Jun 27, 2025 at 01:09 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `multivendor`
 --
-
+CREATE DATABASE IF NOT EXISTS `multivendor` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `multivendor`;
 -- --------------------------------------------------------
 
 --
@@ -119,7 +120,7 @@ CREATE TABLE `providers` (
 INSERT INTO `providers` (`id`, `user_id`, `business_name`, `service_category`, `description`, `location`, `phone`, `hourly_rate`, `kyc_document`, `status`, `rating`, `total_reviews`, `created_at`, `updated_at`) VALUES
 (1, 4, 'Mikes Electrical Services', 'electrician', 'Professional electrical services for residential and commercial properties. Licensed and insured.', 'Downtown Area', '+1234567892', 75.00, NULL, 'approved', 5.00, 1, '2025-06-25 06:35:32', '2025-06-25 07:30:26'),
 (2, 5, 'Sarahs Plumbing Solutions', 'plumber', 'Expert plumbing services with 24/7 emergency response. All types of plumbing work.', 'Westside District', '+1234567893', 65.00, NULL, 'approved', 4.00, 1, '2025-06-25 06:35:32', '2025-06-25 07:31:06'),
-(3, 6, 'David\'s Cleaning Pro', 'cleaner', 'Professional cleaning services for homes and offices. Eco-friendly products used.', 'Eastside Community', '+1234567894', 45.00, NULL, 'approved', NULL, 0, '2025-06-25 06:35:32', '2025-06-25 06:35:32'),
+(3, 6, 'Davids Cleaning Pro', 'cleaner', 'Professional cleaning services for homes and offices. Eco-friendly products used.', 'Eastside Community', '+1234567894', 45.00, NULL, 'approved', NULL, 0, '2025-06-25 06:35:32', '2025-06-27 11:08:23'),
 (4, 8, 'Repairing Alpha', 'mechanic', 'Best mechanical works provided by Raj Repairing Alpha', 'India', '123', 7.00, 'htPPgz8Xcm.png', 'approved', 0.00, 0, '2025-06-25 06:57:13', '2025-06-26 04:22:10'),
 (5, 10, 'Jay Clean Works', 'cleaner', 'We works for clean', 'New York', '123', 1.00, 'waf1o8Efh0.png', 'pending', 0.00, 0, '2025-06-26 06:19:25', '2025-06-26 06:19:25');
 
@@ -240,11 +241,11 @@ INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`, `status`, `p
 (1, 'admin', 'admin@servicehub.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'admin', 'active', NULL, NULL, NULL, '2025-06-25 06:35:32', '2025-06-25 06:35:32'),
 (2, 'john_doe', 'john@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'customer', 'active', NULL, '+1234567890', '123 Main St, City, State', '2025-06-25 06:35:32', '2025-06-25 06:35:32'),
 (3, 'jane_smith', 'jane@example.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'customer', 'active', NULL, '+1234567891', '456 Oak Ave, City, State', '2025-06-25 06:35:32', '2025-06-25 06:35:32'),
-(4, 'mike_electric', 'mike@electric.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'provider', 'active', 'mAyiL2X1Ru.jpeg', '+1234567892', '789 Service Rd, City, State', '2025-06-25 06:35:32', '2025-06-25 07:26:58'),
-(5, 'sarah_plumber', 'sarah@plumber.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'provider', 'active', 'WJrSJsNhC0.jpeg', '+1234567893', '321 Fix St, City, State', '2025-06-25 06:35:32', '2025-06-25 07:30:59'),
-(6, 'david_cleaner', 'david@cleaner.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'provider', 'active', NULL, '+1234567894', '654 Clean Ave, City, State', '2025-06-25 06:35:32', '2025-06-25 06:35:32'),
+(4, 'mike_electric', 'mike@electric.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'provider', 'active', 'mSvP9kopUU.jpg', '+1234567892', '789 Service Rd, City, State', '2025-06-25 06:35:32', '2025-06-27 11:07:55'),
+(5, 'sarah_plumber', 'sarah@plumber.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'provider', 'active', 'KDDEXKpCEn.png', '+1234567893', '321 Fix St, City, State', '2025-06-25 06:35:32', '2025-06-27 11:07:33'),
+(6, 'david_cleaner', 'david@cleaner.com', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', 'provider', 'active', 'Ahwrw9j2XL.jpg', '+1234567894', '654 Clean Ave, City, State', '2025-06-25 06:35:32', '2025-06-27 11:07:08'),
 (7, 'mayurpatadiya', 'mpatadiya0@gmail.com', '$2y$10$fvOZZotsQhFSulxqhY5fLunatjWLJw/uAJPnW2CoHCC.QU19xBSgC', 'customer', 'active', 'Yzy7BexnjK.png', '9106723238', 'Mayur Patadiya', '2025-06-25 06:36:05', '2025-06-25 07:48:38'),
-(8, 'Raj', 'raj@gmail.com', '$2y$10$ZMN7x9e8.k43xm/d89EswOqXBJnX6WmoAeyw.XrzxEJBLbgYR/PNW', 'provider', 'active', 'qEJLRteSK7.png', NULL, NULL, '2025-06-25 06:56:09', '2025-06-25 09:28:28'),
+(8, 'Raj', 'raj@gmail.com', '$2y$10$ZMN7x9e8.k43xm/d89EswOqXBJnX6WmoAeyw.XrzxEJBLbgYR/PNW', 'provider', 'active', 'vZOwrzwJva.jpg', NULL, NULL, '2025-06-25 06:56:09', '2025-06-27 11:06:09'),
 (9, 'abhay', 'abhay@gmail.com', '$2y$10$8A7ccBytnB93Fv23SszvWOIxGOFwj35UxURZfcH64oQEz4ISgsBUS', 'customer', 'active', NULL, NULL, NULL, '2025-06-25 12:03:07', '2025-06-26 06:15:52'),
 (10, 'jayesh', 'jayesh@gmail.com', '$2y$10$oBZ9VrOJXOywcWZzYNoe4u8EZQ6g2Xy2MwOtOK0WV0FRkUS.EzISO', 'provider', 'active', NULL, NULL, NULL, '2025-06-26 06:18:05', '2025-06-26 06:18:05');
 
