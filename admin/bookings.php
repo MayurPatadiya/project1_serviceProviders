@@ -97,6 +97,9 @@ $status_options = get_booking_status_options();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage Bookings - ServiceHub Admin</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        
+    </style>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
@@ -174,7 +177,7 @@ $status_options = get_booking_status_options();
                             <input type="date" id="date" name="date" value="<?php echo htmlspecialchars($date_filter); ?>">
                         </div>
                         <div class="filter-group">
-                            <button type="submit" class="btn-primary" style="margin-top: 1.7rem;">Filter</button>
+                            <button type="submit" class="btn-primary">Filter</button>
                         </div>
                     </div>
                 </form>

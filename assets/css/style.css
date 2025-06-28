@@ -922,12 +922,7 @@ width: 100%;
     display: flex;
     justify-content: center;
 }
-#btn-clear{
 
-}
-#btn-filter{
-    
-}
 @media (max-width: 768px) {
     .filter-sidebar {
         max-width: 100%;
@@ -1217,22 +1212,30 @@ width: 100%;
     margin-bottom: 2rem;
     border: 1px solid #e1e5e9;
     transition: all 0.3s ease;
+       
 }
 
 .filter-form {
     width: 100%;
 }
 
-.filter-row {
+ .filter-row {
     display: flex;
+    justify-content: space-between;
+    align-items: start;
     gap: 1rem;
-    flex-wrap: wrap;
-    align-items: end;
+    flex-wrap: wrap;    
+} 
+.filter-group:first-child {
+    flex: 2; /* Make the first filter group wider */
 }
-
-.filter-group {
-    flex: 1;
-    min-width: 200px;
+.filter-group:last-child {
+    position: relative;
+    top: 35px;
+}
+.filter-group { 
+    flex: 1;   
+    /* min-width: 200px; */
 }
 
 .filter-group label {

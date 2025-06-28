@@ -62,6 +62,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <title>Add Service - ServiceHub</title>
     <link rel="stylesheet" href="../assets/css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .form-group input,textarea,select{
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar">

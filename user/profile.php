@@ -60,6 +60,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile - ServiceHub</title>
     <link rel="stylesheet" href="../assets/css/style.css">
+    <style>
+        .form-group input,textarea,select{
+            width: 100%;
+        }
+    </style>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>

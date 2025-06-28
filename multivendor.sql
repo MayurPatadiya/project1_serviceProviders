@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 27, 2025 at 01:09 PM
+-- Generation Time: Jun 28, 2025 at 08:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -22,6 +22,7 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `multivendor` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `multivendor`;
+
 -- --------------------------------------------------------
 
 --
@@ -121,8 +122,8 @@ INSERT INTO `providers` (`id`, `user_id`, `business_name`, `service_category`, `
 (1, 4, 'Mikes Electrical Services', 'electrician', 'Professional electrical services for residential and commercial properties. Licensed and insured.', 'Downtown Area', '+1234567892', 75.00, NULL, 'approved', 5.00, 1, '2025-06-25 06:35:32', '2025-06-25 07:30:26'),
 (2, 5, 'Sarahs Plumbing Solutions', 'plumber', 'Expert plumbing services with 24/7 emergency response. All types of plumbing work.', 'Westside District', '+1234567893', 65.00, NULL, 'approved', 4.00, 1, '2025-06-25 06:35:32', '2025-06-25 07:31:06'),
 (3, 6, 'Davids Cleaning Pro', 'cleaner', 'Professional cleaning services for homes and offices. Eco-friendly products used.', 'Eastside Community', '+1234567894', 45.00, NULL, 'approved', NULL, 0, '2025-06-25 06:35:32', '2025-06-27 11:08:23'),
-(4, 8, 'Repairing Alpha', 'mechanic', 'Best mechanical works provided by Raj Repairing Alpha', 'India', '123', 7.00, 'htPPgz8Xcm.png', 'approved', 0.00, 0, '2025-06-25 06:57:13', '2025-06-26 04:22:10'),
-(5, 10, 'Jay Clean Works', 'cleaner', 'We works for clean', 'New York', '123', 1.00, 'waf1o8Efh0.png', 'pending', 0.00, 0, '2025-06-26 06:19:25', '2025-06-26 06:19:25');
+(4, 8, 'Repairing Alpha', 'mechanic', 'Best mechanical works provided by Raj Repairing Alpha', 'India', '123', 7.00, '', 'approved', 0.00, 0, '2025-06-25 06:57:13', '2025-06-28 06:10:33'),
+(5, 10, 'Jay Clean Works', 'cleaner', 'We works for clean', 'New York', '123', 1.00, '', 'pending', 0.00, 0, '2025-06-26 06:19:25', '2025-06-28 06:10:18');
 
 -- --------------------------------------------------------
 

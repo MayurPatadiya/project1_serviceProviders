@@ -2,6 +2,58 @@
 
 A comprehensive web application where multiple service providers can register and list their services. Customers can browse, filter, and request services, while admins can monitor and manage the platform.
 
+Below is a **quick‑start “run it locally” checklist** you can drop straight into your docs or send to teammates.
+(It assumes Windows + XAMPP, folder name **service\_providers**, and the SQL dump called **multivendor.sql** inside the project.)
+
+---
+
+## 🏁 Quick Start (XAMPP, Core PHP)
+
+1. **Install XAMPP**
+   • Download & install from apachefriends.org (use the PHP 7.4+ bundle).
+
+2. **Put the project in `htdocs`**
+
+   ```text
+   C:\xampp\htdocs\service_providers   ←  entire project folder
+   ```
+
+3. **Create the database**
+
+   1. Start **XAMPP Control Panel** → **MySQL Start** and **Apache Start**
+   2. Open [http://localhost/phpmyadmin](http://localhost/phpmyadmin)
+   3. **Create database** → name it **multivendor** (utf8 / utf8\_general\_ci)
+   4. Click the new DB → **Import** → choose `multivendor.sql` → **Go**
+
+   *(CLI alternative)*
+
+   ```bash
+   cd C:\xampp\htdocs\service_providers
+   mysql -u root -p  multivendor < multivendor.sql
+   ```
+
+4. **Update DB credentials** – `config/database.php`
+
+   ```php
+   $host     = 'localhost';
+   $username = 'root';      // default XAMPP user
+   $password = '';          // default XAMPP has no password
+   $database = 'multivendor';
+   ```
+
+5. **Start Apache** (XAMPP Control Panel → **Apache Start** and ** MYSQL Start**)
+
+6. **Run the site**
+   [http://localhost/project_folder_name
+
+7. **Log in with the default admin**
+
+   ```
+   Email:    admin@servicehub.com
+   Password: password
+   ```
+
+
 ## 🚀 Features
 
 ### For Service Providers
@@ -273,10 +325,10 @@ This project is created for educational and demonstration purposes.
 
 ---
 
-**ServiceHub** - Connecting customers with trusted service providers since 2024. #   m u l t i v e n d o r 
- 
- #   p r o j e c t 1 _ s e r v i c e P r o v i d e r s 
- 
- #   p r o j e c t 1 _ s e r v i c e P r o v i d e r s 
- 
- 
+**ServiceHub** - Connecting customers with trusted service providers since 2024. #   m u l t i v e n d o r 
+ 
+ #   p r o j e c t 1 _ s e r v i c e P r o v i d e r s 
+ 
+ #   p r o j e c t 1 _ s e r v i c e P r o v i d e r s 
+ 
+ 
